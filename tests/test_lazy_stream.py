@@ -1,5 +1,5 @@
 """
-Tests of OleStream reading a stream's data on demand (UltimateTournament fork).
+Tests of OleStream reading a stream's data on demand (cobbery fork).
 """
 
 import io

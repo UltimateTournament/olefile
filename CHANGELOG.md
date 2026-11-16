@@ -3,7 +3,7 @@ Detailed CHANGELOG
 
 olefile.py
 ----------
-* 2026-11-16 v0.47+ut.1 (UltimateTournament fork):
+* 2026-11-16 v0.47+cobbery.1 (cobbery fork):
     - OleStream reads a stream's data on demand instead of holding the whole
       stream in memory: it keeps the sector indexes (4 bytes per sector) and
       reads a run of adjacent sectors at a time. A 1 GiB stream is copied with
