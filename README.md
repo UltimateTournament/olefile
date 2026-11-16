@@ -1,10 +1,10 @@
 olefile
 =======
 
-**UltimateTournament fork.** This fork reads OLE streams on demand rather than
+**cobbery fork.** This fork reads OLE streams on demand rather than
 holding them in memory, and loads the FAT in linear time, so that files of
-gigabytes can be read with little memory. See the 0.47+ut.1 entry of
-[CHANGELOG.md](CHANGELOG.md). Releases of the fork are tagged `vX+ut.N` and
+gigabytes can be read with little memory. See the 0.47+cobbery.1 entry of
+[CHANGELOG.md](CHANGELOG.md). Releases of the fork are tagged `vX+cobbery.N` and
 attach a wheel; the rest of this README is upstream's.
 
 [![Test](https://github.com/decalage2/olefile/actions/workflows/test.yml/badge.svg)](https://github.com/decalage2/olefile/actions)

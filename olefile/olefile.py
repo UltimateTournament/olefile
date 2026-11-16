@@ -87,7 +87,7 @@ from __future__ import print_function   # This version of olefile requires Pytho
 # PERFORMANCE OF THIS SOFTWARE.
 
 __date__    = "2023-12-01"
-__version__ = '0.47+ut.1'
+__version__ = '0.47+cobbery.1'
 __author__  = "Philippe Lagadec"
 
 __all__ = ['isOleFile', 'OleFileIO', 'OleMetadata', 'enable_logging',
@@ -595,7 +595,7 @@ class OleStream(io.RawIOBase):
     only the sector indexes are kept, 4 bytes per sector. The data is read
     from the file on demand, a run of adjacent sectors at a time, so that a
     large stream is never held in memory as a whole.
-    (UltimateTournament fork: OleStream used to be a BytesIO holding the
+    (cobbery fork: OleStream used to be a BytesIO holding the
     whole stream, built from a list of its sectors.)
 
     Attributes:
