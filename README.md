@@ -1,6 +1,12 @@
 olefile
 =======
 
+**UltimateTournament fork.** This fork reads OLE streams on demand rather than
+holding them in memory, and loads the FAT in linear time, so that files of
+gigabytes can be read with little memory. See the 0.47+ut.1 entry of
+[CHANGELOG.md](CHANGELOG.md). Releases of the fork are tagged `vX+ut.N` and
+attach a wheel; the rest of this README is upstream's.
+
 [![Test](https://github.com/decalage2/olefile/actions/workflows/test.yml/badge.svg)](https://github.com/decalage2/olefile/actions)
 [![Build Status AppVeyor](https://ci.appveyor.com/api/projects/status/github/decalage2/olefile?svg=true)](https://ci.appveyor.com/project/decalage2/olefile)
 [![codecov](https://codecov.io/gh/decalage2/olefile/branch/main/graph/badge.svg)](https://codecov.io/gh/decalage2/olefile)
