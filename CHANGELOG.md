@@ -3,6 +3,18 @@ Detailed CHANGELOG
 
 olefile.py
 ----------
+* 2026-11-16 v0.47+ut.1 (UltimateTournament fork):
+    - OleStream reads a stream's data on demand instead of holding the whole
+      stream in memory: it keeps the sector indexes (4 bytes per sector) and
+      reads a run of adjacent sectors at a time. A 1 GiB stream is copied with
+      a 56 MiB peak instead of 3.4 GiB. OleStream is now an io.RawIOBase rather
+      than a BytesIO: read, readinto, seek, tell and close work as before, and
+      the BytesIO-only methods such as getvalue are gone. A sector past the end
+      of the file is a defect when the stream is opened, as before; the data is
+      then read when asked for.
+    - loadfat_sect grows the FAT in place, where it copied the whole FAT for
+      each FAT sector, which took O(n^2) time and memory for a large file
+      (issue #176).
 * 2023-11-30 v0.47.dev6:
     - fixed issue #142: isOleFile has a new data parameter to handle files in memory properly
     - fixed issue #156: write_sect now correctly detects when data is larger than the sector size
